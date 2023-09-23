@@ -2,11 +2,12 @@ grammar Boom;
 
 file
 : code
+| EOF
 ;
 
 code
 : statement '!' code
-|
+| statement '!'
 ;
 
 statement
@@ -24,6 +25,16 @@ print: 'KABOOM' expr;
 expr
 : ID
 | INT
+| addExpr
+;
+
+unaryExpr
+: ID
+| INT
+;
+
+addExpr
+: unaryExpr 'BAM' expr
 ;
 
 ID: ('a'..'z')+ ;

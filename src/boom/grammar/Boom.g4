@@ -23,8 +23,7 @@ assign: ID 'ZAP' expr;
 print: 'KABOOM' expr;
 
 expr
-: ID
-| INT
+: unaryExpr
 | addExpr
 ;
 

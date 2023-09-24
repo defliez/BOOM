@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="Created project in IntelliJ for esoteric language BOOM. Installed ANTLR plugin and added ANTLR as a library for the project. Created grammar file 'Boom.g4' and defined first iteration of basic grammar for the language.">
-      <change afterPath="$PROJECT_DIR$/programs/add.boom" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CompileBoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RunCompiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomBaseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomBaseVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boom/grammar/BoomVisitor.java" afterDir="false" />
+    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="Refactor Boom.interp and Boom.g4, add program to add two numbers.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompileBoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileBoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RunCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +49,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable"
   }
 }]]></component>
   <component name="RunManager">
@@ -102,7 +92,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695504262416</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create 'programs' directory, 'RunCompiler.java', 'CompileBoom.java', and 'add.boom'&#10;&#10;This commit encompasses several changes:&#10;&#10;- Created a new directory named 'programs' dedicated to storing BOOM language programs.&#10;- Introduced the 'RunCompiler.java' file, responsible for running the compiler. Added basic user input handling.&#10;- Generated an ANTLR Recognizer.&#10;- Added the 'CompileBoom.java' file. Implemented CompileBoom as a listener.&#10;- Made adjustments to the 'Boom.g4' grammar file, including handling EOF, '!' statements, 'expr,' 'unaryExpr,' and 'addExpr.'&#10;- Created the 'add.boom' file for testing addition operations involving numbers and variables.">
+      <option name="closed" value="true" />
+      <created>1695510396735</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695510396735</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactor Boom.interp and Boom.g4, add program to add two numbers.">
+      <option name="closed" value="true" />
+      <created>1695576071943</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695576071943</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +125,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Created project in IntelliJ for esoteric language BOOM. Installed ANTLR plugin and added ANTLR as a library for the project. Created grammar file 'Boom.g4' and defined first iteration of basic grammar for the language." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created project in IntelliJ for esoteric language BOOM. Installed ANTLR plugin and added ANTLR as a library for the project. Created grammar file 'Boom.g4' and defined first iteration of basic grammar for the language." />
+    <MESSAGE value="Create 'programs' directory, 'RunCompiler.java', 'CompileBoom.java', and 'add.boom'&#10;&#10;This commit encompasses several changes:&#10;&#10;- Created a new directory named 'programs' dedicated to storing BOOM language programs.&#10;- Introduced the 'RunCompiler.java' file, responsible for running the compiler. Added basic user input handling.&#10;- Generated an ANTLR Recognizer.&#10;- Added the 'CompileBoom.java' file. Implemented CompileBoom as a listener.&#10;- Made adjustments to the 'Boom.g4' grammar file, including handling EOF, '!' statements, 'expr,' 'unaryExpr,' and 'addExpr.'&#10;- Created the 'add.boom' file for testing addition operations involving numbers and variables." />
+    <MESSAGE value="Refactor Boom.interp and Boom.g4, add program to add two numbers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor Boom.interp and Boom.g4, add program to add two numbers." />
   </component>
 </project>

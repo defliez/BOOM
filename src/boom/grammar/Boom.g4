@@ -20,7 +20,7 @@ decl: 'POW' ID;
 
 assign: ID 'ZAP' expr;
 
-print: 'KABOOM' expr;
+print: 'KABOOM' ID;
 
 expr
 : unaryExpr

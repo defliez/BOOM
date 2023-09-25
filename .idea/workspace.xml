@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="Refactor Boom.interp and Boom.g4, add program to add two numbers.">
+    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Extend CompileBoom and RunCompiler classes&#10;&#10;CompileBoom class has been extended with the addition of several import statements, and a large number of methods for handling context transitions in the BoomParser. This includes enterFile, exitFile, and similarly named methods for other elements in the grammar.&#10;&#10;RunCompiler class now includes import statements for various ANTLR and Java IO classes. The main method now uses ANTLRInputStream to read from the input file, generates a token stream, and walks the parse tree.&#10;&#10;BoomParser.java has been slightly refactored, with changes in ExprContext and AddExprContext.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programs/add.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/add.boom" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CompileBoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileBoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RunCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/temp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695576071943</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: Extend CompileBoom and RunCompiler classes&#10;&#10;CompileBoom class has been extended with the addition of several import statements, and a large number of methods for handling context transitions in the BoomParser. This includes enterFile, exitFile, and similarly named methods for other elements in the grammar.&#10;&#10;RunCompiler class now includes import statements for various ANTLR and Java IO classes. The main method now uses ANTLRInputStream to read from the input file, generates a token stream, and walks the parse tree.&#10;&#10;BoomParser.java has been slightly refactored, with changes in ExprContext and AddExprContext.">
+      <option name="closed" value="true" />
+      <created>1695581634041</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695581634041</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +139,7 @@
     <MESSAGE value="Created project in IntelliJ for esoteric language BOOM. Installed ANTLR plugin and added ANTLR as a library for the project. Created grammar file 'Boom.g4' and defined first iteration of basic grammar for the language." />
     <MESSAGE value="Create 'programs' directory, 'RunCompiler.java', 'CompileBoom.java', and 'add.boom'&#10;&#10;This commit encompasses several changes:&#10;&#10;- Created a new directory named 'programs' dedicated to storing BOOM language programs.&#10;- Introduced the 'RunCompiler.java' file, responsible for running the compiler. Added basic user input handling.&#10;- Generated an ANTLR Recognizer.&#10;- Added the 'CompileBoom.java' file. Implemented CompileBoom as a listener.&#10;- Made adjustments to the 'Boom.g4' grammar file, including handling EOF, '!' statements, 'expr,' 'unaryExpr,' and 'addExpr.'&#10;- Created the 'add.boom' file for testing addition operations involving numbers and variables." />
     <MESSAGE value="Refactor Boom.interp and Boom.g4, add program to add two numbers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Boom.interp and Boom.g4, add program to add two numbers." />
+    <MESSAGE value="feat: Extend CompileBoom and RunCompiler classes&#10;&#10;CompileBoom class has been extended with the addition of several import statements, and a large number of methods for handling context transitions in the BoomParser. This includes enterFile, exitFile, and similarly named methods for other elements in the grammar.&#10;&#10;RunCompiler class now includes import statements for various ANTLR and Java IO classes. The main method now uses ANTLRInputStream to read from the input file, generates a token stream, and walks the parse tree.&#10;&#10;BoomParser.java has been slightly refactored, with changes in ExprContext and AddExprContext." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Extend CompileBoom and RunCompiler classes&#10;&#10;CompileBoom class has been extended with the addition of several import statements, and a large number of methods for handling context transitions in the BoomParser. This includes enterFile, exitFile, and similarly named methods for other elements in the grammar.&#10;&#10;RunCompiler class now includes import statements for various ANTLR and Java IO classes. The main method now uses ANTLRInputStream to read from the input file, generates a token stream, and walks the parse tree.&#10;&#10;BoomParser.java has been slightly refactored, with changes in ExprContext and AddExprContext." />
   </component>
 </project>

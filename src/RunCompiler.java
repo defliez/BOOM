@@ -14,6 +14,8 @@ public class RunCompiler {
         String infile;
         String outfile;
 
+        CompileBoom compiler = new CompileBoom();
+
         System.out.println("What file do you want to compile?");
         Scanner scanner = new Scanner(System.in);
         infile = scanner.nextLine();
@@ -25,7 +27,7 @@ public class RunCompiler {
         ParseTree tree = parser.file();
 
         ParseTreeWalker walker = new ParseTreeWalker();
-        walker.walk(new CompileBoom(), tree);
+        walker.walk(compiler, tree);
         // Writer writer = new OutputStreamWriter(new FileOutputStream(outFile), "US-ASCII");
     }
 

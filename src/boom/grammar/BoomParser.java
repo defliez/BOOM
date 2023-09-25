@@ -391,9 +391,7 @@ public class BoomParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class PrintContext extends ParserRuleContext {
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
+		public TerminalNode ID() { return getToken(BoomParser.ID, 0); }
 		public PrintContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -422,7 +420,7 @@ public class BoomParser extends Parser {
 			setState(43);
 			match(T__3);
 			setState(44);
-			expr();
+			match(ID);
 			}
 		}
 		catch (RecognitionException re) {
@@ -630,12 +628,12 @@ public class BoomParser extends Parser {
 		"\u0000\u0000\u0000#\u0005\u0001\u0000\u0000\u0000$%\u0005\u0002\u0000"+
 		"\u0000%&\u0005\u0006\u0000\u0000&\u0007\u0001\u0000\u0000\u0000\'(\u0005"+
 		"\u0006\u0000\u0000()\u0005\u0003\u0000\u0000)*\u0003\f\u0006\u0000*\t"+
-		"\u0001\u0000\u0000\u0000+,\u0005\u0004\u0000\u0000,-\u0003\f\u0006\u0000"+
-		"-\u000b\u0001\u0000\u0000\u0000.1\u0003\u000e\u0007\u0000/1\u0003\u0010"+
-		"\b\u00000.\u0001\u0000\u0000\u00000/\u0001\u0000\u0000\u00001\r\u0001"+
-		"\u0000\u0000\u000023\u0007\u0000\u0000\u00003\u000f\u0001\u0000\u0000"+
-		"\u000045\u0003\u000e\u0007\u000056\u0005\u0005\u0000\u000067\u0003\f\u0006"+
-		"\u00007\u0011\u0001\u0000\u0000\u0000\u0004\u0014\u001d\"0";
+		"\u0001\u0000\u0000\u0000+,\u0005\u0004\u0000\u0000,-\u0005\u0006\u0000"+
+		"\u0000-\u000b\u0001\u0000\u0000\u0000.1\u0003\u000e\u0007\u0000/1\u0003"+
+		"\u0010\b\u00000.\u0001\u0000\u0000\u00000/\u0001\u0000\u0000\u00001\r"+
+		"\u0001\u0000\u0000\u000023\u0007\u0000\u0000\u00003\u000f\u0001\u0000"+
+		"\u0000\u000045\u0003\u000e\u0007\u000056\u0005\u0005\u0000\u000067\u0003"+
+		"\f\u0006\u00007\u0011\u0001\u0000\u0000\u0000\u0004\u0014\u001d\"0";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

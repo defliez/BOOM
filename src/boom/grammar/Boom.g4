@@ -36,6 +36,22 @@ addExpr
 : unaryExpr 'BAM' expr
 ;
 
+compareExpr
+: greaterExpr
+| lesserExpr
+;
+
+greaterExpr
+: expr 'HMPH' expr
+;
+
+lesserExpr
+: expr 'GULP' expr
+;
+
+while: 'ZOINKS' compareExpr '?!' code '!?';
+
+
 ID: ('a'..'z')+ ;
 INT: ('0'..'9')+ ;
 WS: [ \n\t\r]+ -> skip;

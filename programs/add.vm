@@ -1,0 +1,9 @@
+push 37
+pop fantomen
+push fantomen
+push 4
+push 5
+add
+add
+pop guran
+print guran

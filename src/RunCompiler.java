@@ -28,7 +28,15 @@ public class RunCompiler {
 
         ParseTreeWalker walker = new ParseTreeWalker();
         walker.walk(compiler, tree);
-        // Writer writer = new OutputStreamWriter(new FileOutputStream(outFile), "US-ASCII");
+
+        System.out.println("What do you want the compiled file to be called?");
+        scanner = new Scanner(System.in);
+        outfile = scanner.nextLine();
+
+        Writer writer = new OutputStreamWriter(new FileOutputStream(outfile), "US-ASCII");
+        writer.write(compiler.getCompiledCode());
+        writer.flush();
+        writer.close();
     }
 
 }

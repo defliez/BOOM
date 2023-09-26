@@ -19,7 +19,7 @@ public class CompileBoom extends BoomBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitAssign(BoomParser.AssignContext ctx) {
-        String row = "print " + ctx.ID().getText();
+        String row = "pop " + ctx.ID().getText();
         this.out.append(row + "\n");
         System.out.println("pop " + ctx.ID().getText());
     }
@@ -52,5 +52,44 @@ public class CompileBoom extends BoomBaseListener {
         this.out.append("add\n");
         System.out.println("add");
     }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void enterGreaterExpr(BoomParser.GreaterExprContext ctx) { }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void exitGreaterExpr(BoomParser.GreaterExprContext ctx) { }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void enterLesserExpr(BoomParser.LesserExprContext ctx) { }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void exitLesserExpr(BoomParser.LesserExprContext ctx) { }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void enterWhile(BoomParser.WhileContext ctx) {
+        this.out.append("label enterLoop\n");
+        System.out.println("label enterLoop");
+    }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void exitWhile(BoomParser.WhileContext ctx) { }
 
 }

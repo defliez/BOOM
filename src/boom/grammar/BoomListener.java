@@ -97,4 +97,44 @@ public interface BoomListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAddExpr(BoomParser.AddExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BoomParser#compareExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterCompareExpr(BoomParser.CompareExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BoomParser#compareExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitCompareExpr(BoomParser.CompareExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BoomParser#greaterExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterGreaterExpr(BoomParser.GreaterExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BoomParser#greaterExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitGreaterExpr(BoomParser.GreaterExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BoomParser#lesserExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterLesserExpr(BoomParser.LesserExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BoomParser#lesserExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitLesserExpr(BoomParser.LesserExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BoomParser#while}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile(BoomParser.WhileContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BoomParser#while}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile(BoomParser.WhileContext ctx);
 }

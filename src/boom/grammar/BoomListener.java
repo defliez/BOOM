@@ -98,35 +98,35 @@ public interface BoomListener extends ParseTreeListener {
 	 */
 	void exitAddExpr(BoomParser.AddExprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BoomParser#compareExpr}.
+	 * Enter a parse tree produced by {@link BoomParser#lesser}.
 	 * @param ctx the parse tree
 	 */
-	void enterCompareExpr(BoomParser.CompareExprContext ctx);
+	void enterLesser(BoomParser.LesserContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BoomParser#compareExpr}.
+	 * Exit a parse tree produced by {@link BoomParser#lesser}.
 	 * @param ctx the parse tree
 	 */
-	void exitCompareExpr(BoomParser.CompareExprContext ctx);
+	void exitLesser(BoomParser.LesserContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BoomParser#greaterExpr}.
+	 * Enter a parse tree produced by {@link BoomParser#greater}.
 	 * @param ctx the parse tree
 	 */
-	void enterGreaterExpr(BoomParser.GreaterExprContext ctx);
+	void enterGreater(BoomParser.GreaterContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BoomParser#greaterExpr}.
+	 * Exit a parse tree produced by {@link BoomParser#greater}.
 	 * @param ctx the parse tree
 	 */
-	void exitGreaterExpr(BoomParser.GreaterExprContext ctx);
+	void exitGreater(BoomParser.GreaterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BoomParser#lesserExpr}.
+	 * Enter a parse tree produced by {@link BoomParser#cond}.
 	 * @param ctx the parse tree
 	 */
-	void enterLesserExpr(BoomParser.LesserExprContext ctx);
+	void enterCond(BoomParser.CondContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BoomParser#lesserExpr}.
+	 * Exit a parse tree produced by {@link BoomParser#cond}.
 	 * @param ctx the parse tree
 	 */
-	void exitLesserExpr(BoomParser.LesserExprContext ctx);
+	void exitCond(BoomParser.CondContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BoomParser#while}.
 	 * @param ctx the parse tree

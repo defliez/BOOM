@@ -65,23 +65,23 @@ public interface BoomVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAddExpr(BoomParser.AddExprContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BoomParser#compareExpr}.
+	 * Visit a parse tree produced by {@link BoomParser#lesser}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCompareExpr(BoomParser.CompareExprContext ctx);
+	T visitLesser(BoomParser.LesserContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BoomParser#greaterExpr}.
+	 * Visit a parse tree produced by {@link BoomParser#greater}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitGreaterExpr(BoomParser.GreaterExprContext ctx);
+	T visitGreater(BoomParser.GreaterContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BoomParser#lesserExpr}.
+	 * Visit a parse tree produced by {@link BoomParser#cond}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLesserExpr(BoomParser.LesserExprContext ctx);
+	T visitCond(BoomParser.CondContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BoomParser#while}.
 	 * @param ctx the parse tree

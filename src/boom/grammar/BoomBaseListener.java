@@ -125,37 +125,37 @@ public class BoomBaseListener implements BoomListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCompareExpr(BoomParser.CompareExprContext ctx) { }
+	@Override public void enterLesser(BoomParser.LesserContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCompareExpr(BoomParser.CompareExprContext ctx) { }
+	@Override public void exitLesser(BoomParser.LesserContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterGreaterExpr(BoomParser.GreaterExprContext ctx) { }
+	@Override public void enterGreater(BoomParser.GreaterContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitGreaterExpr(BoomParser.GreaterExprContext ctx) { }
+	@Override public void exitGreater(BoomParser.GreaterContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLesserExpr(BoomParser.LesserExprContext ctx) { }
+	@Override public void enterCond(BoomParser.CondContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLesserExpr(BoomParser.LesserExprContext ctx) { }
+	@Override public void exitCond(BoomParser.CondContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

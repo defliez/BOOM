@@ -21,19 +21,19 @@ public class BoomParser extends Parser {
 		T__9=10, ID=11, INT=12, WS=13;
 	public static final int
 		RULE_file = 0, RULE_code = 1, RULE_statement = 2, RULE_decl = 3, RULE_assign = 4, 
-		RULE_print = 5, RULE_expr = 6, RULE_unaryExpr = 7, RULE_addExpr = 8, RULE_compareExpr = 9, 
-		RULE_greaterExpr = 10, RULE_lesserExpr = 11, RULE_while = 12;
+		RULE_print = 5, RULE_expr = 6, RULE_unaryExpr = 7, RULE_addExpr = 8, RULE_lesser = 9, 
+		RULE_greater = 10, RULE_cond = 11, RULE_while = 12;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"file", "code", "statement", "decl", "assign", "print", "expr", "unaryExpr", 
-			"addExpr", "compareExpr", "greaterExpr", "lesserExpr", "while"
+			"addExpr", "lesser", "greater", "cond", "while"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'!'", "'POW'", "'ZAP'", "'KABOOM'", "'BAM'", "'HMPH'", "'GULP'", 
+			null, "'!'", "'POW'", "'ZAP'", "'KABOOM'", "'BAM'", "'GULP'", "'HMPH'", 
 			"'ZOINKS'", "'?!'", "'!?'"
 		};
 	}
@@ -605,157 +605,157 @@ public class BoomParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class CompareExprContext extends ParserRuleContext {
-		public GreaterExprContext greaterExpr() {
-			return getRuleContext(GreaterExprContext.class,0);
+	public static class LesserContext extends ParserRuleContext {
+		public List<UnaryExprContext> unaryExpr() {
+			return getRuleContexts(UnaryExprContext.class);
 		}
-		public LesserExprContext lesserExpr() {
-			return getRuleContext(LesserExprContext.class,0);
+		public UnaryExprContext unaryExpr(int i) {
+			return getRuleContext(UnaryExprContext.class,i);
 		}
-		public CompareExprContext(ParserRuleContext parent, int invokingState) {
+		public LesserContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_compareExpr; }
+		@Override public int getRuleIndex() { return RULE_lesser; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BoomListener ) ((BoomListener)listener).enterCompareExpr(this);
+			if ( listener instanceof BoomListener ) ((BoomListener)listener).enterLesser(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BoomListener ) ((BoomListener)listener).exitCompareExpr(this);
+			if ( listener instanceof BoomListener ) ((BoomListener)listener).exitLesser(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BoomVisitor ) return ((BoomVisitor<? extends T>)visitor).visitCompareExpr(this);
+			if ( visitor instanceof BoomVisitor ) return ((BoomVisitor<? extends T>)visitor).visitLesser(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final CompareExprContext compareExpr() throws RecognitionException {
-		CompareExprContext _localctx = new CompareExprContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_compareExpr);
+	public final LesserContext lesser() throws RecognitionException {
+		LesserContext _localctx = new LesserContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_lesser);
 		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(64);
+			unaryExpr();
+			setState(65);
+			match(T__5);
 			setState(66);
+			unaryExpr();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GreaterContext extends ParserRuleContext {
+		public List<UnaryExprContext> unaryExpr() {
+			return getRuleContexts(UnaryExprContext.class);
+		}
+		public UnaryExprContext unaryExpr(int i) {
+			return getRuleContext(UnaryExprContext.class,i);
+		}
+		public GreaterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_greater; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof BoomListener ) ((BoomListener)listener).enterGreater(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof BoomListener ) ((BoomListener)listener).exitGreater(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof BoomVisitor ) return ((BoomVisitor<? extends T>)visitor).visitGreater(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final GreaterContext greater() throws RecognitionException {
+		GreaterContext _localctx = new GreaterContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_greater);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(68);
+			unaryExpr();
+			setState(69);
+			match(T__6);
+			setState(70);
+			unaryExpr();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CondContext extends ParserRuleContext {
+		public LesserContext lesser() {
+			return getRuleContext(LesserContext.class,0);
+		}
+		public GreaterContext greater() {
+			return getRuleContext(GreaterContext.class,0);
+		}
+		public CondContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cond; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof BoomListener ) ((BoomListener)listener).enterCond(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof BoomListener ) ((BoomListener)listener).exitCond(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof BoomVisitor ) return ((BoomVisitor<? extends T>)visitor).visitCond(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final CondContext cond() throws RecognitionException {
+		CondContext _localctx = new CondContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_cond);
+		try {
+			setState(74);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(64);
-				greaterExpr();
+				setState(72);
+				lesser();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(65);
-				lesserExpr();
+				setState(73);
+				greater();
 				}
 				break;
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	@SuppressWarnings("CheckReturnValue")
-	public static class GreaterExprContext extends ParserRuleContext {
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
-		}
-		public GreaterExprContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_greaterExpr; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BoomListener ) ((BoomListener)listener).enterGreaterExpr(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BoomListener ) ((BoomListener)listener).exitGreaterExpr(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BoomVisitor ) return ((BoomVisitor<? extends T>)visitor).visitGreaterExpr(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final GreaterExprContext greaterExpr() throws RecognitionException {
-		GreaterExprContext _localctx = new GreaterExprContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_greaterExpr);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(68);
-			expr();
-			setState(69);
-			match(T__5);
-			setState(70);
-			expr();
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	@SuppressWarnings("CheckReturnValue")
-	public static class LesserExprContext extends ParserRuleContext {
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
-		}
-		public LesserExprContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_lesserExpr; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BoomListener ) ((BoomListener)listener).enterLesserExpr(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BoomListener ) ((BoomListener)listener).exitLesserExpr(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BoomVisitor ) return ((BoomVisitor<? extends T>)visitor).visitLesserExpr(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final LesserExprContext lesserExpr() throws RecognitionException {
-		LesserExprContext _localctx = new LesserExprContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_lesserExpr);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(72);
-			expr();
-			setState(73);
-			match(T__6);
-			setState(74);
-			expr();
 			}
 		}
 		catch (RecognitionException re) {
@@ -771,8 +771,8 @@ public class BoomParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class WhileContext extends ParserRuleContext {
-		public CompareExprContext compareExpr() {
-			return getRuleContext(CompareExprContext.class,0);
+		public CondContext cond() {
+			return getRuleContext(CondContext.class,0);
 		}
 		public CodeContext code() {
 			return getRuleContext(CodeContext.class,0);
@@ -805,7 +805,7 @@ public class BoomParser extends Parser {
 			setState(76);
 			match(T__7);
 			setState(77);
-			compareExpr();
+			cond();
 			setState(78);
 			match(T__8);
 			setState(79);
@@ -836,15 +836,15 @@ public class BoomParser extends Parser {
 		"+\b\u0002\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004"+
 		"\u0001\u0004\u0001\u0004\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0006"+
 		"\u0001\u0006\u0003\u00069\b\u0006\u0001\u0007\u0001\u0007\u0001\b\u0001"+
-		"\b\u0001\b\u0001\b\u0001\t\u0001\t\u0003\tC\b\t\u0001\n\u0001\n\u0001"+
-		"\n\u0001\n\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b\u0001\f\u0001"+
+		"\b\u0001\b\u0001\b\u0001\t\u0001\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001"+
+		"\n\u0001\n\u0001\u000b\u0001\u000b\u0003\u000bK\b\u000b\u0001\f\u0001"+
 		"\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0000\u0000\r\u0000\u0002\u0004"+
 		"\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016\u0018\u0000\u0001\u0001\u0000"+
 		"\u000b\fK\u0000\u001c\u0001\u0000\u0000\u0000\u0002%\u0001\u0000\u0000"+
 		"\u0000\u0004*\u0001\u0000\u0000\u0000\u0006,\u0001\u0000\u0000\u0000\b"+
 		"/\u0001\u0000\u0000\u0000\n3\u0001\u0000\u0000\u0000\f8\u0001\u0000\u0000"+
 		"\u0000\u000e:\u0001\u0000\u0000\u0000\u0010<\u0001\u0000\u0000\u0000\u0012"+
-		"B\u0001\u0000\u0000\u0000\u0014D\u0001\u0000\u0000\u0000\u0016H\u0001"+
+		"@\u0001\u0000\u0000\u0000\u0014D\u0001\u0000\u0000\u0000\u0016J\u0001"+
 		"\u0000\u0000\u0000\u0018L\u0001\u0000\u0000\u0000\u001a\u001d\u0003\u0002"+
 		"\u0001\u0000\u001b\u001d\u0005\u0000\u0000\u0001\u001c\u001a\u0001\u0000"+
 		"\u0000\u0000\u001c\u001b\u0001\u0000\u0000\u0000\u001d\u0001\u0001\u0000"+
@@ -862,14 +862,14 @@ public class BoomParser extends Parser {
 		"\u0010\b\u000086\u0001\u0000\u0000\u000087\u0001\u0000\u0000\u00009\r"+
 		"\u0001\u0000\u0000\u0000:;\u0007\u0000\u0000\u0000;\u000f\u0001\u0000"+
 		"\u0000\u0000<=\u0003\u000e\u0007\u0000=>\u0005\u0005\u0000\u0000>?\u0003"+
-		"\f\u0006\u0000?\u0011\u0001\u0000\u0000\u0000@C\u0003\u0014\n\u0000AC"+
-		"\u0003\u0016\u000b\u0000B@\u0001\u0000\u0000\u0000BA\u0001\u0000\u0000"+
-		"\u0000C\u0013\u0001\u0000\u0000\u0000DE\u0003\f\u0006\u0000EF\u0005\u0006"+
-		"\u0000\u0000FG\u0003\f\u0006\u0000G\u0015\u0001\u0000\u0000\u0000HI\u0003"+
-		"\f\u0006\u0000IJ\u0005\u0007\u0000\u0000JK\u0003\f\u0006\u0000K\u0017"+
-		"\u0001\u0000\u0000\u0000LM\u0005\b\u0000\u0000MN\u0003\u0012\t\u0000N"+
-		"O\u0005\t\u0000\u0000OP\u0003\u0002\u0001\u0000PQ\u0005\n\u0000\u0000"+
-		"Q\u0019\u0001\u0000\u0000\u0000\u0005\u001c%*8B";
+		"\f\u0006\u0000?\u0011\u0001\u0000\u0000\u0000@A\u0003\u000e\u0007\u0000"+
+		"AB\u0005\u0006\u0000\u0000BC\u0003\u000e\u0007\u0000C\u0013\u0001\u0000"+
+		"\u0000\u0000DE\u0003\u000e\u0007\u0000EF\u0005\u0007\u0000\u0000FG\u0003"+
+		"\u000e\u0007\u0000G\u0015\u0001\u0000\u0000\u0000HK\u0003\u0012\t\u0000"+
+		"IK\u0003\u0014\n\u0000JH\u0001\u0000\u0000\u0000JI\u0001\u0000\u0000\u0000"+
+		"K\u0017\u0001\u0000\u0000\u0000LM\u0005\b\u0000\u0000MN\u0003\u0016\u000b"+
+		"\u0000NO\u0005\t\u0000\u0000OP\u0003\u0002\u0001\u0000PQ\u0005\n\u0000"+
+		"\u0000Q\u0019\u0001\u0000\u0000\u0000\u0005\u001c%*8J";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

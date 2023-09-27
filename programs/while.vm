@@ -2,3 +2,19 @@ push 0
 pop a
 push 0
 pop b
+label enterLoop1
+push a
+push 10
+lt
+not
+push b
+push a
+add
+pop b
+push a
+push 1
+add
+pop a
+if-gotolabel exitLoop1
+goto label enterLoop1
+label exitLoop1

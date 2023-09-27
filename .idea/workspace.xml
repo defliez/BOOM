@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Implement while loop and comparison expressions in Boom language&#10;&#10;- Updated Boom.g4 grammar file to include lesser, greater, and cond expressions and modified while structure.&#10;- Modified CompileBoom.java to handle lesser, greater, and cond expressions.&#10;- Added while.boom sample program.">
+    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="Generated ANTLR recognizer for the updated grammar file 'Boom.g4'.">
+      <change afterPath="$PROJECT_DIR$/programs/WhileDesiredOutput" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programs/while.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/while.boom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programs/while.vm" beforeDir="false" afterPath="$PROJECT_DIR$/programs/while.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompileBoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileBoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomBaseVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,8 +167,19 @@
       <option name="project" value="LOCAL" />
       <updated>1695834495520</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Generated ANTLR recognizer for the updated grammar file 'Boom.g4'.">
+      <option name="closed" value="true" />
+      <created>1695835992938</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695835992938</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.vm" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -191,6 +203,7 @@
     <MESSAGE value="Generate an ANTLR Recognizer from the updated grammar file Boom.g4." />
     <MESSAGE value="feat: Update .gitignore, CompileBoom and RunCompiler.&#10;&#10;Created a new .gitignore file in the nand2tetris-vm-translator-master directory&#10;to ignore compiled class files, log files, BlueJ files, package files, virtual machine crash logs and IDE files.&#10;&#10;Updated the CompileBoom.java file to change the print command to pop and added additional functions for greater and lesser expressions, and while loops.&#10;&#10;Updated the RunCompiler.java file to prompt for the name of the compiled file, and write and save the compiled code to the specified file.&#10;&#10;Tested updated RunCompiler.java by inputting programs/add.boom as input file and saving the compiled file as programs/add.vm.&#10;&#10;Translated add.vm using the VM-Translator from https://github.com/koddas/nand2tetris-vm-translator , outputting the translated file to new file called out.vm." />
     <MESSAGE value="feat: Implement while loop and comparison expressions in Boom language&#10;&#10;- Updated Boom.g4 grammar file to include lesser, greater, and cond expressions and modified while structure.&#10;- Modified CompileBoom.java to handle lesser, greater, and cond expressions.&#10;- Added while.boom sample program." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement while loop and comparison expressions in Boom language&#10;&#10;- Updated Boom.g4 grammar file to include lesser, greater, and cond expressions and modified while structure.&#10;- Modified CompileBoom.java to handle lesser, greater, and cond expressions.&#10;- Added while.boom sample program." />
+    <MESSAGE value="Generated ANTLR recognizer for the updated grammar file 'Boom.g4'." />
+    <option name="LAST_COMMIT_MESSAGE" value="Generated ANTLR recognizer for the updated grammar file 'Boom.g4'." />
   </component>
 </project>

@@ -8,6 +8,7 @@ file
 code
 : statement '!' code
 | statement '!'
+| while
 ;
 
 statement
@@ -50,9 +51,11 @@ cond
 | greater
 ;
 
-while: 'ZOINKS' cond '?!'
+
+while: 'ZOINKS' '(' cond ')' '?'
         code
-        '!?';
+        '?!'
+;
 
 
 ID: ('a'..'z')+ ;

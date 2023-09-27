@@ -1,0 +1,15 @@
+POW a!
+a ZAP 1!
+
+POW n!
+n ZAP 4!
+
+POW sum!
+sum ZAP 0!
+
+ZOINKS (a GULP n) ?
+    sum ZAP sum BAM a!
+    a ZAP a BAM 1!
+?!
+
+KABOOM sum!

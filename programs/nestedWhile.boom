@@ -1,0 +1,21 @@
+POW a!
+POW b!
+a ZAP 0!
+b ZAP 0!
+
+POW x!
+POW y!
+x ZAP 0!
+y ZAP 0!
+
+ZOINKS (a GULP 10) ?
+    b ZAP b BAM a!
+    a ZAP a BAM 1!
+
+    ZOINKS (x GULP 10) ?
+        y ZAP y BAM x!
+        x ZAP x BAM 1!
+?!
+
+KABOOM b!
+KABOOM y!

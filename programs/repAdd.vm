@@ -1,0 +1,23 @@
+push 1
+pop a
+push 4
+pop n
+push 0
+pop sum
+label enterLoop1
+push a
+push n
+lt
+not
+if-goto exitLoop1
+push sum
+push a
+add
+pop sum
+push a
+push 1
+add
+pop a
+goto enterLoop1
+label exitLoop1
+print sum

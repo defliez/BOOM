@@ -10,6 +10,7 @@ code
 | statement '!'
 | while code
 | while
+| code while
 ;
 
 statement

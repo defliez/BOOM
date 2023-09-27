@@ -1,0 +1,21 @@
+  push 0                      // let a = 0
+  pop a
+  push 0                      // let b = 0
+  pop b
+label enterLoop1              // while .. do
+  push a
+  push 10
+  lt                          // a < 10
+  not
+  if-goto exitLoop1
+  push a                      // b = b + a
+  push b
+  add
+  pop b
+  push a                      // a = a + 1
+  push 1
+  add
+  pop a
+  goto enterLoop1
+label exitLoop1:              // end loop
+  print b

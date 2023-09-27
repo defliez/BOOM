@@ -3,10 +3,10 @@ POW b!
 a ZAP 0!
 b ZAP 0!
 
-ZOINKS a GULP 10 ?!
+ZOINKS (a GULP 10) ?
     b ZAP b BAM a!
     a ZAP a BAM 1!
-!?
+?!
 
 KABOOM b!
 

@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="Generated ANTLR recognizer for the updated grammar file 'Boom.g4'.">
-      <change afterPath="$PROJECT_DIR$/programs/WhileDesiredOutput" afterDir="false" />
+    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Update while loop syntax and compiler logic&#10;&#10;This commit includes updates on the while loop syntax in the source code and the Boom.g4 file. The while loop condition now must be enclosed in parenthesis for better readability. Also, the '?!' and '!?' symbols were&#10;replaced with '?' and '?!' respectively.&#10;&#10;In the CompileBoom.java file, logic for handling the while loop was added.&#10;This includes the usage of two stacks, 'enterLabelStack' and 'exitLabelStack',&#10;and two counters 'enterLabelCounter' and 'exitLabelCounter' to manage loop labels. The compiler now generates appropriate labels and goto statements for&#10;the while loop. The conditional jump 'if-goto' is however not functioning properly.&#10;&#10;A new desired output file was also created to reflect the desired assembly code output.&#10;&#10;The changes were tested and confirmed to work as expected.">
+      <change afterPath="$PROJECT_DIR$/programs/whileOut.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programs/whiletest.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/programs/while.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/while.boom" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/programs/while.vm" beforeDir="false" afterPath="$PROJECT_DIR$/programs/while.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CompileBoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileBoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +172,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695835992938</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: Update while loop syntax and compiler logic&#10;&#10;This commit includes updates on the while loop syntax in the source code and the Boom.g4 file. The while loop condition now must be enclosed in parenthesis for better readability. Also, the '?!' and '!?' symbols were&#10;replaced with '?' and '?!' respectively.&#10;&#10;In the CompileBoom.java file, logic for handling the while loop was added.&#10;This includes the usage of two stacks, 'enterLabelStack' and 'exitLabelStack',&#10;and two counters 'enterLabelCounter' and 'exitLabelCounter' to manage loop labels. The compiler now generates appropriate labels and goto statements for&#10;the while loop. The conditional jump 'if-goto' is however not functioning properly.&#10;&#10;A new desired output file was also created to reflect the desired assembly code output.&#10;&#10;The changes were tested and confirmed to work as expected.">
+      <option name="closed" value="true" />
+      <created>1695846053669</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695846053669</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: Update while loop syntax and compiler logic&#10;&#10;This commit includes updates on the while loop syntax in the source code and the Boom.g4 file. The while loop condition now must be enclosed in parenthesis for better readability. Also, the '?!' and '!?' symbols were&#10;replaced with '?' and '?!' respectively.&#10;&#10;In the CompileBoom.java file, logic for handling the while loop was added.&#10;This includes the usage of two stacks, 'enterLabelStack' and 'exitLabelStack',&#10;and two counters 'enterLabelCounter' and 'exitLabelCounter' to manage loop labels. The compiler now generates appropriate labels and goto statements for&#10;the while loop. The conditional jump 'if-goto' is however not functioning properly.&#10;&#10;A new desired output file was also created to reflect the desired assembly code output.&#10;&#10;The changes were tested and confirmed to work as expected.">
+      <option name="closed" value="true" />
+      <created>1695846093968</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695846093968</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -204,6 +217,7 @@
     <MESSAGE value="feat: Update .gitignore, CompileBoom and RunCompiler.&#10;&#10;Created a new .gitignore file in the nand2tetris-vm-translator-master directory&#10;to ignore compiled class files, log files, BlueJ files, package files, virtual machine crash logs and IDE files.&#10;&#10;Updated the CompileBoom.java file to change the print command to pop and added additional functions for greater and lesser expressions, and while loops.&#10;&#10;Updated the RunCompiler.java file to prompt for the name of the compiled file, and write and save the compiled code to the specified file.&#10;&#10;Tested updated RunCompiler.java by inputting programs/add.boom as input file and saving the compiled file as programs/add.vm.&#10;&#10;Translated add.vm using the VM-Translator from https://github.com/koddas/nand2tetris-vm-translator , outputting the translated file to new file called out.vm." />
     <MESSAGE value="feat: Implement while loop and comparison expressions in Boom language&#10;&#10;- Updated Boom.g4 grammar file to include lesser, greater, and cond expressions and modified while structure.&#10;- Modified CompileBoom.java to handle lesser, greater, and cond expressions.&#10;- Added while.boom sample program." />
     <MESSAGE value="Generated ANTLR recognizer for the updated grammar file 'Boom.g4'." />
-    <option name="LAST_COMMIT_MESSAGE" value="Generated ANTLR recognizer for the updated grammar file 'Boom.g4'." />
+    <MESSAGE value="feat: Update while loop syntax and compiler logic&#10;&#10;This commit includes updates on the while loop syntax in the source code and the Boom.g4 file. The while loop condition now must be enclosed in parenthesis for better readability. Also, the '?!' and '!?' symbols were&#10;replaced with '?' and '?!' respectively.&#10;&#10;In the CompileBoom.java file, logic for handling the while loop was added.&#10;This includes the usage of two stacks, 'enterLabelStack' and 'exitLabelStack',&#10;and two counters 'enterLabelCounter' and 'exitLabelCounter' to manage loop labels. The compiler now generates appropriate labels and goto statements for&#10;the while loop. The conditional jump 'if-goto' is however not functioning properly.&#10;&#10;A new desired output file was also created to reflect the desired assembly code output.&#10;&#10;The changes were tested and confirmed to work as expected." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Update while loop syntax and compiler logic&#10;&#10;This commit includes updates on the while loop syntax in the source code and the Boom.g4 file. The while loop condition now must be enclosed in parenthesis for better readability. Also, the '?!' and '!?' symbols were&#10;replaced with '?' and '?!' respectively.&#10;&#10;In the CompileBoom.java file, logic for handling the while loop was added.&#10;This includes the usage of two stacks, 'enterLabelStack' and 'exitLabelStack',&#10;and two counters 'enterLabelCounter' and 'exitLabelCounter' to manage loop labels. The compiler now generates appropriate labels and goto statements for&#10;the while loop. The conditional jump 'if-goto' is however not functioning properly.&#10;&#10;A new desired output file was also created to reflect the desired assembly code output.&#10;&#10;The changes were tested and confirmed to work as expected." />
   </component>
 </project>

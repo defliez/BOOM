@@ -1,5 +1,6 @@
 POW a!
 POW b!
+POW c!
 a ZAP 0!
 b ZAP 0!
 
@@ -9,7 +10,3 @@ ZOINKS (a GULP 10) ?
 ?!
 
 KABOOM b!
-
-
-
-

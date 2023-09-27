@@ -8,6 +8,7 @@ file
 code
 : statement '!' code
 | statement '!'
+| while code
 | while
 ;
 

@@ -15,6 +15,9 @@ public class CompileBoom extends BoomBaseListener {
     private int enterLabelCounter = 0;
     private int exitLabelCounter = 0;
 
+    private static final String TRUE_VALUE = "0";
+    private static final String FALSE_VALUE = "-1";
+
     public String getCompiledCode() {
         return this.out.toString();
     }
@@ -64,12 +67,11 @@ public class CompileBoom extends BoomBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitCond(BoomParser.CondContext ctx) {
-        if (ctx.parent instanceof BoomParser.LesserContext) {
-            this.out.append("lt\n");
-            System.out.println("lt");
-        } else if (ctx.parent instanceof BoomParser.GreaterContext) {
-            this.out.append("gt\n");
-            System.out.println("gt");
+        if (ctx.parent instanceof BoomParser.WhileContext) {
+            this.out.append("not\n");
+            System.out.println("not");
+            this.out.append("if-goto " + exitLabelStack.peek() + "\n");
+            System.out.println("if-goto " + exitLabelStack.peek());
         }
     }
     /**
@@ -79,9 +81,12 @@ public class CompileBoom extends BoomBaseListener {
      */
     @Override public void exitLesser(BoomParser.LesserContext ctx) {
         this.out.append("lt\n");
-        this.out.append("not\n");
         System.out.println("lt");
-        System.out.println("not");
+
+        //this.out.append("push " + TRUE_VALUE + "\n");
+
+        //this.out.append("if-goto " + exitLabelStack.peek() + "\n");
+        //System.out.println("if-goto " + exitLabelStack.peek());
     }
     /**
      * {@inheritDoc}
@@ -90,9 +95,9 @@ public class CompileBoom extends BoomBaseListener {
      */
     @Override public void exitGreater(BoomParser.GreaterContext ctx) {
         this.out.append("gt\n");
-        this.out.append("not\n");
         System.out.println("gt");
-        System.out.println("not");
+
+        //this.out.append("push " + TRUE_VALUE + "\n");
     }
     /**
      * {@inheritDoc}
@@ -103,13 +108,13 @@ public class CompileBoom extends BoomBaseListener {
         enterLabelCounter++;
         exitLabelCounter++;
 
-        String enterLabel = "label enterLoop" + enterLabelCounter;
-        String exitLabel = "label exitLoop" + exitLabelCounter;
+        String enterLabel = "enterLoop" + enterLabelCounter;
+        String exitLabel = "exitLoop" + exitLabelCounter;
 
         enterLabelStack.push(enterLabel);
         exitLabelStack.push(exitLabel);
 
-        this.out.append(enterLabel + "\n");
+        this.out.append("label " + enterLabel + "\n");
         System.out.println(enterLabel);
     }
     /**
@@ -121,14 +126,12 @@ public class CompileBoom extends BoomBaseListener {
         String enterLabel = enterLabelStack.pop();
         String exitLabel = exitLabelStack.pop();
 
-        this.out.append("if-goto " + exitLabel + "\n");
-        System.out.println("if-goto " + exitLabel);
 
         this.out.append("goto " + enterLabel + "\n");
         System.out.println("goto " + enterLabel);
 
-        this.out.append(exitLabel + "\n");
-        System.out.println(exitLabel);
+        this.out.append("label " + exitLabel + "\n");
+        System.out.println("label " + exitLabel);
     }
 
 }

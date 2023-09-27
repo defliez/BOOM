@@ -1,9 +1,4 @@
 import boom.grammar.*;
-import org.antlr.v4.runtime.ParserRuleContext;
-import org.antlr.v4.runtime.tree.ErrorNode;
-import org.antlr.v4.runtime.tree.TerminalNode;
-
-import java.util.HashMap;
 import java.util.Stack;
 
 public class CompileBoom extends BoomBaseListener {
@@ -15,13 +10,9 @@ public class CompileBoom extends BoomBaseListener {
     private int enterLabelCounter = 0;
     private int exitLabelCounter = 0;
 
-    private static final String TRUE_VALUE = "0";
-    private static final String FALSE_VALUE = "-1";
-
     public String getCompiledCode() {
         return this.out.toString();
     }
-
     /**
      * {@inheritDoc}
      *
@@ -82,11 +73,6 @@ public class CompileBoom extends BoomBaseListener {
     @Override public void exitLesser(BoomParser.LesserContext ctx) {
         this.out.append("lt\n");
         System.out.println("lt");
-
-        //this.out.append("push " + TRUE_VALUE + "\n");
-
-        //this.out.append("if-goto " + exitLabelStack.peek() + "\n");
-        //System.out.println("if-goto " + exitLabelStack.peek());
     }
     /**
      * {@inheritDoc}
@@ -96,8 +82,6 @@ public class CompileBoom extends BoomBaseListener {
     @Override public void exitGreater(BoomParser.GreaterContext ctx) {
         this.out.append("gt\n");
         System.out.println("gt");
-
-        //this.out.append("push " + TRUE_VALUE + "\n");
     }
     /**
      * {@inheritDoc}
@@ -126,12 +110,10 @@ public class CompileBoom extends BoomBaseListener {
         String enterLabel = enterLabelStack.pop();
         String exitLabel = exitLabelStack.pop();
 
-
         this.out.append("goto " + enterLabel + "\n");
         System.out.println("goto " + enterLabel);
 
         this.out.append("label " + exitLabel + "\n");
         System.out.println("label " + exitLabel);
     }
-
 }

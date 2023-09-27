@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Extend CompileBoom and RunCompiler classes&#10;&#10;CompileBoom class has been extended with the addition of several import statements, and a large number of methods for handling context transitions in the BoomParser. This includes enterFile, exitFile, and similarly named methods for other elements in the grammar.&#10;&#10;RunCompiler class now includes import statements for various ANTLR and Java IO classes. The main method now uses ANTLRInputStream to read from the input file, generates a token stream, and walks the parse tree.&#10;&#10;BoomParser.java has been slightly refactored, with changes in ExprContext and AddExprContext.">
+    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Update .gitignore, CompileBoom and RunCompiler.&#10;&#10;Created a new .gitignore file in the nand2tetris-vm-translator-master directory&#10;to ignore compiled class files, log files, BlueJ files, package files, virtual machine crash logs and IDE files.&#10;&#10;Updated the CompileBoom.java file to change the print command to pop and added additional functions for greater and lesser expressions, and while loops.&#10;&#10;Updated the RunCompiler.java file to prompt for the name of the compiled file, and write and save the compiled code to the specified file.&#10;&#10;Tested updated RunCompiler.java by inputting programs/add.boom as input file and saving the compiled file as programs/add.vm.&#10;&#10;Translated add.vm using the VM-Translator from https://github.com/koddas/nand2tetris-vm-translator , outputting the translated file to new file called out.vm.">
+      <change afterPath="$PROJECT_DIR$/programs/while.boom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programs/while.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programs/add.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/add.boom" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CompileBoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileBoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RunCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunCompiler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/temp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +36,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2Vnw4SLJbbK2HX5v8Vdt7lCswKf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,23 +50,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="RunCompiler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RunCompiler" />
@@ -120,7 +130,39 @@
       <option name="project" value="LOCAL" />
       <updated>1695581634041</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(grammar): update grammar rules and simplify compiler code&#10;&#10;This commit includes updates to the grammar rules in Boom.g4, changes the print statement to accept an identifier, and adds a missing newline at the end of file in add.boom. In addition, it simplifies the CompileBoom.java by removing unnecessary overridden methods and adds a method to generate compiled code. It also updates RunCompiler.java to use the new method in CompileBoom.java.&#10;&#10;Changes:&#10;- Boom.g4: Updated grammar rules and changed print statement to accept an identifier instead of an expression.&#10;- add.boom: Added a missing newline at the end of file.&#10;- CompileBoom.java: Removed unnecessary overridden methods and added a method to generate compiled code.&#10;- RunCompiler.java: Updated to use the new method in CompileBoom.java to get compiled code.">
+      <option name="closed" value="true" />
+      <created>1695664536844</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695664536844</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(grammar): add comparison expressions to Boom.g4 grammar #master&#10;&#10;Added new comparison expressions to the Boom.g4 grammar file. The expressions include greaterExpr and lesserExpr, defined with 'HMPH' and 'GULP' operators respectively. Also introduced a while loop construct using the 'ZOINKS' and '?!'&#10;tokens.">
+      <option name="closed" value="true" />
+      <created>1695722409224</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695722409224</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Generate an ANTLR Recognizer from the updated grammar file Boom.g4.">
+      <option name="closed" value="true" />
+      <created>1695722730810</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695722730810</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: Update .gitignore, CompileBoom and RunCompiler.&#10;&#10;Created a new .gitignore file in the nand2tetris-vm-translator-master directory&#10;to ignore compiled class files, log files, BlueJ files, package files, virtual machine crash logs and IDE files.&#10;&#10;Updated the CompileBoom.java file to change the print command to pop and added additional functions for greater and lesser expressions, and while loops.&#10;&#10;Updated the RunCompiler.java file to prompt for the name of the compiled file, and write and save the compiled code to the specified file.&#10;&#10;Tested updated RunCompiler.java by inputting programs/add.boom as input file and saving the compiled file as programs/add.vm.&#10;&#10;Translated add.vm using the VM-Translator from https://github.com/koddas/nand2tetris-vm-translator , outputting the translated file to new file called out.vm.">
+      <option name="closed" value="true" />
+      <created>1695723354264</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695723354264</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +182,10 @@
     <MESSAGE value="Create 'programs' directory, 'RunCompiler.java', 'CompileBoom.java', and 'add.boom'&#10;&#10;This commit encompasses several changes:&#10;&#10;- Created a new directory named 'programs' dedicated to storing BOOM language programs.&#10;- Introduced the 'RunCompiler.java' file, responsible for running the compiler. Added basic user input handling.&#10;- Generated an ANTLR Recognizer.&#10;- Added the 'CompileBoom.java' file. Implemented CompileBoom as a listener.&#10;- Made adjustments to the 'Boom.g4' grammar file, including handling EOF, '!' statements, 'expr,' 'unaryExpr,' and 'addExpr.'&#10;- Created the 'add.boom' file for testing addition operations involving numbers and variables." />
     <MESSAGE value="Refactor Boom.interp and Boom.g4, add program to add two numbers." />
     <MESSAGE value="feat: Extend CompileBoom and RunCompiler classes&#10;&#10;CompileBoom class has been extended with the addition of several import statements, and a large number of methods for handling context transitions in the BoomParser. This includes enterFile, exitFile, and similarly named methods for other elements in the grammar.&#10;&#10;RunCompiler class now includes import statements for various ANTLR and Java IO classes. The main method now uses ANTLRInputStream to read from the input file, generates a token stream, and walks the parse tree.&#10;&#10;BoomParser.java has been slightly refactored, with changes in ExprContext and AddExprContext." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Extend CompileBoom and RunCompiler classes&#10;&#10;CompileBoom class has been extended with the addition of several import statements, and a large number of methods for handling context transitions in the BoomParser. This includes enterFile, exitFile, and similarly named methods for other elements in the grammar.&#10;&#10;RunCompiler class now includes import statements for various ANTLR and Java IO classes. The main method now uses ANTLRInputStream to read from the input file, generates a token stream, and walks the parse tree.&#10;&#10;BoomParser.java has been slightly refactored, with changes in ExprContext and AddExprContext." />
+    <MESSAGE value="feat(grammar): update grammar rules and simplify compiler code&#10;&#10;This commit includes updates to the grammar rules in Boom.g4, changes the print statement to accept an identifier, and adds a missing newline at the end of file in add.boom. In addition, it simplifies the CompileBoom.java by removing unnecessary overridden methods and adds a method to generate compiled code. It also updates RunCompiler.java to use the new method in CompileBoom.java.&#10;&#10;Changes:&#10;- Boom.g4: Updated grammar rules and changed print statement to accept an identifier instead of an expression.&#10;- add.boom: Added a missing newline at the end of file.&#10;- CompileBoom.java: Removed unnecessary overridden methods and added a method to generate compiled code.&#10;- RunCompiler.java: Updated to use the new method in CompileBoom.java to get compiled code." />
+    <MESSAGE value="feat(grammar): add comparison expressions to Boom.g4 grammar #master&#10;&#10;Added new comparison expressions to the Boom.g4 grammar file. The expressions include greaterExpr and lesserExpr, defined with 'HMPH' and 'GULP' operators respectively. Also introduced a while loop construct using the 'ZOINKS' and '?!'&#10;tokens." />
+    <MESSAGE value="Generate an ANTLR Recognizer from the updated grammar file Boom.g4." />
+    <MESSAGE value="feat: Update .gitignore, CompileBoom and RunCompiler.&#10;&#10;Created a new .gitignore file in the nand2tetris-vm-translator-master directory&#10;to ignore compiled class files, log files, BlueJ files, package files, virtual machine crash logs and IDE files.&#10;&#10;Updated the CompileBoom.java file to change the print command to pop and added additional functions for greater and lesser expressions, and while loops.&#10;&#10;Updated the RunCompiler.java file to prompt for the name of the compiled file, and write and save the compiled code to the specified file.&#10;&#10;Tested updated RunCompiler.java by inputting programs/add.boom as input file and saving the compiled file as programs/add.vm.&#10;&#10;Translated add.vm using the VM-Translator from https://github.com/koddas/nand2tetris-vm-translator , outputting the translated file to new file called out.vm." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Update .gitignore, CompileBoom and RunCompiler.&#10;&#10;Created a new .gitignore file in the nand2tetris-vm-translator-master directory&#10;to ignore compiled class files, log files, BlueJ files, package files, virtual machine crash logs and IDE files.&#10;&#10;Updated the CompileBoom.java file to change the print command to pop and added additional functions for greater and lesser expressions, and while loops.&#10;&#10;Updated the RunCompiler.java file to prompt for the name of the compiled file, and write and save the compiled code to the specified file.&#10;&#10;Tested updated RunCompiler.java by inputting programs/add.boom as input file and saving the compiled file as programs/add.vm.&#10;&#10;Translated add.vm using the VM-Translator from https://github.com/koddas/nand2tetris-vm-translator , outputting the translated file to new file called out.vm." />
   </component>
 </project>

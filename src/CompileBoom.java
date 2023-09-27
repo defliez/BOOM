@@ -57,34 +57,39 @@ public class CompileBoom extends BoomBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterGreaterExpr(BoomParser.GreaterExprContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void exitGreaterExpr(BoomParser.GreaterExprContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void enterLesserExpr(BoomParser.LesserExprContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void exitLesserExpr(BoomParser.LesserExprContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void enterWhile(BoomParser.WhileContext ctx) {
-        this.out.append("label enterLoop\n");
-        System.out.println("label enterLoop");
+    @Override public void exitCond(BoomParser.CondContext ctx) {
+        if (ctx.parent instanceof BoomParser.LesserContext) {
+            this.out.append("lt\n");
+            System.out.println("lt");
+        } else if (ctx.parent instanceof BoomParser.GreaterContext) {
+            this.out.append("gt\n");
+            System.out.println("gt");
+        }
     }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void exitLesser(BoomParser.LesserContext ctx) {
+        this.out.append("lt\n");
+        System.out.println("lt");
+    }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void exitGreater(BoomParser.GreaterContext ctx) {
+        this.out.append("gt\n");
+        System.out.println("gt");
+    }
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation does nothing.</p>
+     */
+    @Override public void enterWhile(BoomParser.WhileContext ctx) { }
     /**
      * {@inheritDoc}
      *

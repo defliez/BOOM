@@ -32,24 +32,27 @@ unaryExpr
 | INT
 ;
 
+
 addExpr
 : unaryExpr 'BAM' expr
 ;
 
-compareExpr
-: greaterExpr
-| lesserExpr
+lesser
+: unaryExpr 'GULP' unaryExpr
 ;
 
-greaterExpr
-: expr 'HMPH' expr
+greater
+: unaryExpr 'HMPH' unaryExpr
 ;
 
-lesserExpr
-: expr 'GULP' expr
+cond
+: lesser
+| greater
 ;
 
-while: 'ZOINKS' compareExpr '?!' code '!?';
+while: 'ZOINKS' cond '?!'
+        code
+        '!?';
 
 
 ID: ('a'..'z')+ ;

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Add new files and update Boom.g4 grammar (master)&#10;&#10;This commit adds two new files:&#10;-'nestedWhile.boom' to test that nested while loops work as expected. &#10;-'repAdd.boom' to test that repeated addition of 1 to chosen integer n works as expected and prints the right sum value.&#10;&#10;It also changes the grammar file Boom.g4 to allow nested loops.&#10;&#10;It also translates repAdd.vm to 'repAddOut.vm' using the VM translator from https://github.com/koddas/nand2tetris-vm-translator to then test the translated code in the nand2tetris VM Emulator.">
-      <change beforePath="$PROJECT_DIR$/src/CompileBoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileBoom.java" afterDir="false" />
+    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Simplify CompileBoom.java by removing unused imports and variables (master)&#10;&#10;This commit removes unnecessary imports and variables from CompileBoom.java, including the removal of unused imports such as 'java.util.HashMap' and 'org.antlr.v4.runtime.*'. It also removes unused static final Strings TRUE_VALUE and FALSE_VALUE, and commented-out code. The .idea/workspace.xml was also updated in this commit.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +24,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "defliez"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d1708231-7224-4521-ac3c-4e4e099ec73c" />
+        <option name="url" value="https://github.com/defliez/BOOM.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -36,23 +55,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="RunCompiler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RunCompiler" />
@@ -75,6 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695484960822</updated>
+      <workItem from="1695986010227" duration="1152000" />
     </task>
     <task id="LOCAL-00001" summary="Created project in IntelliJ for esoteric language BOOM. Installed ANTLR plugin and added ANTLR as a library for the project. Created grammar file 'Boom.g4' and defined first iteration of basic grammar for the language.">
       <option name="closed" value="true" />
@@ -196,8 +224,19 @@
       <option name="project" value="LOCAL" />
       <updated>1695852726594</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: Simplify CompileBoom.java by removing unused imports and variables (master)&#10;&#10;This commit removes unnecessary imports and variables from CompileBoom.java, including the removal of unused imports such as 'java.util.HashMap' and 'org.antlr.v4.runtime.*'. It also removes unused static final Strings TRUE_VALUE and FALSE_VALUE, and commented-out code. The .idea/workspace.xml was also updated in this commit.">
+      <option name="closed" value="true" />
+      <created>1695852940193</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695852940193</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.vm" />
@@ -228,6 +267,7 @@
     <MESSAGE value="feat: Update while loop syntax and compiler logic&#10;&#10;This commit includes updates on the while loop syntax in the source code and the Boom.g4 file. The while loop condition now must be enclosed in parenthesis for better readability. Also, the '?!' and '!?' symbols were&#10;replaced with '?' and '?!' respectively.&#10;&#10;In the CompileBoom.java file, logic for handling the while loop was added.&#10;This includes the usage of two stacks, 'enterLabelStack' and 'exitLabelStack',&#10;and two counters 'enterLabelCounter' and 'exitLabelCounter' to manage loop labels. The compiler now generates appropriate labels and goto statements for&#10;the while loop. The conditional jump 'if-goto' is however not functioning properly.&#10;&#10;A new desired output file was also created to reflect the desired assembly code output.&#10;&#10;The changes were tested and confirmed to work as expected." />
     <MESSAGE value="feat: Add support for while loop in Boom language (#master)&#10;&#10;This commit introduces support for while loop in the Boom language. This feature has been implemented in the 'while.boom' program and the Boom grammar (Boom.g4). &#10;The changes include the addition of new constants for boolean values in 'CompileBoom.java', refactoring of exit and enter label handling in loops, and modification of certain condition handlers. Other changes include syntax cleanup, such as removal of excess newlines in 'while.boom'." />
     <MESSAGE value="feat: Add new files and update Boom.g4 grammar (master)&#10;&#10;This commit adds two new files:&#10;-'nestedWhile.boom' to test that nested while loops work as expected. &#10;-'repAdd.boom' to test that repeated addition of 1 to chosen integer n works as expected and prints the right sum value.&#10;&#10;It also changes the grammar file Boom.g4 to allow nested loops.&#10;&#10;It also translates repAdd.vm to 'repAddOut.vm' using the VM translator from https://github.com/koddas/nand2tetris-vm-translator to then test the translated code in the nand2tetris VM Emulator." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add new files and update Boom.g4 grammar (master)&#10;&#10;This commit adds two new files:&#10;-'nestedWhile.boom' to test that nested while loops work as expected. &#10;-'repAdd.boom' to test that repeated addition of 1 to chosen integer n works as expected and prints the right sum value.&#10;&#10;It also changes the grammar file Boom.g4 to allow nested loops.&#10;&#10;It also translates repAdd.vm to 'repAddOut.vm' using the VM translator from https://github.com/koddas/nand2tetris-vm-translator to then test the translated code in the nand2tetris VM Emulator." />
+    <MESSAGE value="feat: Simplify CompileBoom.java by removing unused imports and variables (master)&#10;&#10;This commit removes unnecessary imports and variables from CompileBoom.java, including the removal of unused imports such as 'java.util.HashMap' and 'org.antlr.v4.runtime.*'. It also removes unused static final Strings TRUE_VALUE and FALSE_VALUE, and commented-out code. The .idea/workspace.xml was also updated in this commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Simplify CompileBoom.java by removing unused imports and variables (master)&#10;&#10;This commit removes unnecessary imports and variables from CompileBoom.java, including the removal of unused imports such as 'java.util.HashMap' and 'org.antlr.v4.runtime.*'. It also removes unused static final Strings TRUE_VALUE and FALSE_VALUE, and commented-out code. The .idea/workspace.xml was also updated in this commit." />
   </component>
 </project>

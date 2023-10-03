@@ -1,3 +1,7 @@
+#!
+Program to demonstrate the use of the ZOINKS statement (while loop).
+!#
+
 POW a!
 POW b!
 a ZAP 0!

@@ -63,3 +63,4 @@ while: 'ZOINKS' '(' cond ')' '?'    // while loop syntax
 ID: ('a'..'z')+ ;           // an ID is a sequence of lowercase letters
 INT: ('0'..'9')+ ;          // an INT is a sequence of digits
 WS: [ \n\t\r]+ -> skip;     // ignore whitespace
+COMMENT: '#!' .*? '!#' -> channel(HIDDEN); // ignore comments

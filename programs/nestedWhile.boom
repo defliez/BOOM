@@ -1,3 +1,7 @@
+#!
+Program to test nested loops using ZOINKS (while loop).
+!#
+
 POW a!
 POW b!
 a ZAP 0!

@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Improve code readability and update .idea configs&#10;&#10;- Update Boom.g4 to improve code readability by adding comments explaining each grammar rule.&#10;- Remove xml tag from misc.xml to adhere to IntelliJ's standard format.&#10;- Update workspace.xml to reflect changes in the IDE's settings and properties.">
+    <list default="true" id="14c53944-e54c-4225-825b-84fc03f51c18" name="Changes" comment="feat: Add comment support and program descriptions&#10;&#10;This commit adds support for inline and block comments in the Boom.g4 grammar and&#10;adds descriptive comments to each boom program explaining its purpose.&#10;This will improve code readability and understanding for users.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programs/add.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/add.boom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programs/nestedWhile.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/nestedWhile.boom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programs/repAdd.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/repAdd.boom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programs/while.boom" beforeDir="false" afterPath="$PROJECT_DIR$/programs/while.boom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/Boom.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/boom/grammar/BoomLexer.interp" afterDir="false" />
@@ -113,7 +108,7 @@
       <updated>1695484960822</updated>
       <workItem from="1695986010227" duration="2784000" />
       <workItem from="1696172560078" duration="276000" />
-      <workItem from="1696292613968" duration="3633000" />
+      <workItem from="1696292613968" duration="4343000" />
     </task>
     <task id="LOCAL-00001" summary="Created project in IntelliJ for esoteric language BOOM. Installed ANTLR plugin and added ANTLR as a library for the project. Created grammar file 'Boom.g4' and defined first iteration of basic grammar for the language.">
       <option name="closed" value="true" />
@@ -251,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696012115803</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: Add comment support and program descriptions&#10;&#10;This commit adds support for inline and block comments in the Boom.g4 grammar and&#10;adds descriptive comments to each boom program explaining its purpose.&#10;This will improve code readability and understanding for users.">
+      <option name="closed" value="true" />
+      <created>1696351328147</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1696351328147</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +291,7 @@
     <MESSAGE value="feat: Add new files and update Boom.g4 grammar (master)&#10;&#10;This commit adds two new files:&#10;-'nestedWhile.boom' to test that nested while loops work as expected. &#10;-'repAdd.boom' to test that repeated addition of 1 to chosen integer n works as expected and prints the right sum value.&#10;&#10;It also changes the grammar file Boom.g4 to allow nested loops.&#10;&#10;It also translates repAdd.vm to 'repAddOut.vm' using the VM translator from https://github.com/koddas/nand2tetris-vm-translator to then test the translated code in the nand2tetris VM Emulator." />
     <MESSAGE value="feat: Simplify CompileBoom.java by removing unused imports and variables (master)&#10;&#10;This commit removes unnecessary imports and variables from CompileBoom.java, including the removal of unused imports such as 'java.util.HashMap' and 'org.antlr.v4.runtime.*'. It also removes unused static final Strings TRUE_VALUE and FALSE_VALUE, and commented-out code. The .idea/workspace.xml was also updated in this commit." />
     <MESSAGE value="feat: Improve code readability and update .idea configs&#10;&#10;- Update Boom.g4 to improve code readability by adding comments explaining each grammar rule.&#10;- Remove xml tag from misc.xml to adhere to IntelliJ's standard format.&#10;- Update workspace.xml to reflect changes in the IDE's settings and properties." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Improve code readability and update .idea configs&#10;&#10;- Update Boom.g4 to improve code readability by adding comments explaining each grammar rule.&#10;- Remove xml tag from misc.xml to adhere to IntelliJ's standard format.&#10;- Update workspace.xml to reflect changes in the IDE's settings and properties." />
+    <MESSAGE value="feat: Add comment support and program descriptions&#10;&#10;This commit adds support for inline and block comments in the Boom.g4 grammar and&#10;adds descriptive comments to each boom program explaining its purpose.&#10;This will improve code readability and understanding for users." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add comment support and program descriptions&#10;&#10;This commit adds support for inline and block comments in the Boom.g4 grammar and&#10;adds descriptive comments to each boom program explaining its purpose.&#10;This will improve code readability and understanding for users." />
   </component>
 </project>
